@@ -1,0 +1,67 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="f54213a7-c786-4b84-9741-1767858d2ee2">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="59f33373-1db2-4ab1-9be1-50f37c0b06ae">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="2d4f7819-7188-4321-bfc2-4493b3a8ef92"
+				serviceId="nabu.utils.reflection.Node.listByType"
+				resultName="resultbcc01b9862c84e729b3ce0b2a13a0da6"
+				temporaryMapping="true"
+				x="118"
+				y="67"
+				invocationOrder="0"
+				asynchronous="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="27f15f45-d0c0-49dd-b9f1-5b738cdd3ee2"
+					mask="false"
+					optional="false"
+					fixedValue="true">
+				<from>be.nabu.eai.module.jdbc.pool.JDBCPoolArtifact</from>
+				<to>type</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="6c2a4a40-6ae8-4742-808e-e891b361c03e"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resultbcc01b9862c84e729b3ce0b2a13a0da6/nodes</from>
+			<to>pools</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="b89510ff-c2fb-4748-98cf-eea9a6ac10ab"
+			variable="pool">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="b779f079-c229-4ded-b448-663984430ae1">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+					disabled="false"
+					id="b8c609d0-bdf7-4e8f-9ebe-09c1a1730af7"
+					serviceId="nabu.protocols.jdbc.pool.Services.synchronizeManagedTypes"
+					resultName="result9d994be4ccd74e2e9feee9e116a5e76c"
+					temporaryMapping="true"
+					x="67"
+					y="59"
+					invocationOrder="0"
+					asynchronous="false">
+				<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+						disabled="false"
+						id="cc80a891-bf0e-4f8c-90a4-2ba8f5e6c211"
+						mask="false"
+						optional="false"
+						fixedValue="false">
+					<from>pool/id</from>
+					<to>jdbcPoolId</to>
+				</steps>
+			</steps>
+		</steps>
+		<query>pools</query>
+	</steps>
+</sequence>
