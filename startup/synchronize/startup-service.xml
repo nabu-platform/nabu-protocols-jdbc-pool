@@ -6,6 +6,7 @@
     <properties/>
     <runPreDeployment>false</runPreDeployment>
     <runDuringDeployment>true</runDuringDeployment>
-    <runAtStartup>false</runAtStartup>
-    <runAfterStartup>true</runAfterStartup>
+    <runAtStartup>true</runAtStartup>
+    <runAfterStartup>false</runAfterStartup>
+    <startPhase>NORMAL</startPhase>
 </startupService>
