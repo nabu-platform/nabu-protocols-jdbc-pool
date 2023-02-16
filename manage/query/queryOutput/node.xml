@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.types.structure.StructureManager" created="2022-12-09T10:51:14.209+01:00" lastModified="2022-12-09T10:51:24.627+01:00" leaf="true" version="3">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.protocols.jdbc.pool.types.SqlResult</references>
+    <references>java.lang.Long</references>
+</node>

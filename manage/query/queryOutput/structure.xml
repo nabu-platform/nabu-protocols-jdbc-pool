@@ -1,0 +1,3 @@
+<structure name="queryOutput" superType="nabu.protocols.jdbc.pool.types.SqlResult">
+    <field name="runtime" type="java.lang.Long"/>
+</structure>

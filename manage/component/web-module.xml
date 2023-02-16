@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<webModule>
+    <path>/database</path>
+    <webFragments>nabu.protocols.jdbc.pool.manage.query.execute</webFragments>
+    <audience>MANAGER</audience>
+</webModule>
