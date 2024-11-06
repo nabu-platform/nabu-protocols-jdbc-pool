@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<node artifactManager="be.nabu.eai.module.rest.provider.RESTServiceManager" created="2024-10-17T13:23:40.128+02:00" lastModified="2024-10-17T15:23:19.604+02:00" leaf="true" version="12">
+    <environmentId>apollo</environmentId>
+    <hidden>false</hidden>
+    <locked>false</locked>
+    <properties/>
+    <references>nabu.utils.List.sort</references>
+    <references>nabu.protocols.jdbc.pool.Services.getManagedTypes</references>
+    <references>java.lang.String</references>
+    <references>nabu.protocols.jdbc.pool.manage.type.managedTypeList</references>
+</node>

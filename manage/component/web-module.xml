@@ -2,5 +2,6 @@
 <webModule>
     <path>/database</path>
     <webFragments>nabu.protocols.jdbc.pool.manage.query.execute</webFragments>
+    <webFragments>nabu.protocols.jdbc.pool.manage.type.listManaged</webFragments>
     <audience>MANAGER</audience>
 </webModule>

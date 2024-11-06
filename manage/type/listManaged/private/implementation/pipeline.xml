@@ -1,0 +1,5 @@
+<structure interface="nabu.protocols.jdbc.pool.manage.type.listManaged:api" name="pipeline">
+    <structure name="input"/>
+    <structure name="output"/>
+    <field maxOccurs="unbounded" minOccurs="0" name="managedTypes" type="java.lang.String"/>
+</structure>

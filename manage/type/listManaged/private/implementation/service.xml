@@ -1,0 +1,103 @@
+<sequence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		disabled="false"
+		id="2a8525a91ac54d1da99bc90a64ec185c"
+		lineNumber="1">
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="0c15118f501c4d9c86fca4619cea73a2"
+			lineNumber="2">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="a1b0d4965b2043a1adeed1c91a844087"
+				serviceId="nabu.protocols.jdbc.pool.Services.getManagedTypes"
+				resultName="result8cd543b850454d6db5eda7189963f51f"
+				temporaryMapping="true"
+				x="130"
+				y="46"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="94584288a65b42469c98fca0593af717"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>result8cd543b850454d6db5eda7189963f51f/managedTypes</from>
+			<to>managedTypes</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="87a97c12dec945ee94f661f904031e19"
+			label="input/query/q != null"
+			lineNumber="3">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="4668448023684590822eb38b6d56cc13"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>managedTypes[$this ~ "(?i).*" + /input/query/q + ".*"]</from>
+			<to>managedTypes</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+			disabled="false"
+			id="92a55b0785704abf99953de6fb825d9b"
+			lineNumber="4">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Invoke"
+				disabled="false"
+				id="45b415c3a3c841c88418be55b2cbb7ae"
+				serviceId="nabu.utils.List.sort"
+				resultName="resultb516586ae54f4f9b84313eec5b2371c0"
+				temporaryMapping="true"
+				x="252"
+				y="58"
+				invocationOrder="0"
+				asynchronous="false"
+				recache="false">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="b8c5feeca6184ea0ae0c7ef6745f362e"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>managedTypes</from>
+				<to>list</to>
+			</steps>
+		</steps>
+		<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+				disabled="false"
+				id="0d8c2ea14c624d91ae404dd0d50b3baf"
+				mask="false"
+				optional="false"
+				fixedValue="false">
+			<from>resultb516586ae54f4f9b84313eec5b2371c0/list</from>
+			<to>managedTypes</to>
+		</steps>
+	</steps>
+	<steps xsi:type="be.nabu.libs.services.vm.step.For"
+			disabled="false"
+			id="b05d548867344820be5e638e2ab869af"
+			lineNumber="5"
+			variable="managedType"
+			into="output/content/managedTypes">
+		<steps xsi:type="be.nabu.libs.services.vm.step.Map"
+				disabled="false"
+				id="570053ccafdd456fa73744c7510a8ea9"
+				lineNumber="6">
+			<steps xsi:type="be.nabu.libs.services.vm.step.Link"
+					disabled="false"
+					id="1518e960892d4c5da4f685aff169004e"
+					mask="false"
+					optional="false"
+					fixedValue="false">
+				<from>managedType</from>
+				<to>output/content/managedTypes[0]/id</to>
+			</steps>
+		</steps>
+		<query>managedTypes</query>
+	</steps>
+</sequence>
