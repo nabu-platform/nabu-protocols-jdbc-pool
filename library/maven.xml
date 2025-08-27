@@ -1,1 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><maven><artifacts>nabu:eai-module-jdbc-pool</artifacts><internalDomains>nabu</internalDomains><updateSnapshots>false</updateSnapshots></maven>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><maven><artifacts>nabu:eai-module-jdbc-pool</artifacts><internalDomains>nabu</internalDomains>
+	<provided>be.nabu.libs.artifacts:artifacts-api</provided>
+<provided>be.nabu.libs.converter:converter-api</provided>
+<provided>be.nabu.libs.converter:converter-base</provided>
+<provided>be.nabu.libs.types:types-api</provided>
+<provided>be.nabu.libs.types:types-base</provided>
+<provided>be.nabu.libs.types:types-java</provided>
+<provided>be.nabu.libs.types:types-structure</provided>
+<provided>be.nabu.libs.validator:validator-api</provided>
+<provided>be.nabu.libs.validator:validator-base</provided>
+<provided>be.nabu.libs.services:services-api</provided>
+<provided>be.nabu.libs.services:services-pojo</provided>
+<provided>be.nabu.eai:eai-repository</provided>
+<provided>be.nabu.libs.tracer:tracer-api</provided>
+<updateSnapshots>false</updateSnapshots></maven>
